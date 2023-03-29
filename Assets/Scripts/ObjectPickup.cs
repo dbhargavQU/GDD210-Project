@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectPickup : MonoBehaviour
 {
     //Drag in empty Target gameobject
     public GameObject MoveTarget;
     private Rigidbody Objectrb;
+    //UI Reticle
+    public Image Reticle;
     void Start()
     {
         
@@ -27,21 +30,35 @@ public class ObjectPickup : MonoBehaviour
             Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
             if (rb != null)
             {
+                //Changes reticle color
+                Reticle.color = Color.green;
+
                 //Mouse is held down
                 if (Input.GetMouseButton(0))
-                {
+                { 
                     //If Object has rigidbody it will be referenced in FixedUpdate
                     Objectrb = rb;
-                    rb.drag = 25;
-                    rb.angularDrag = 25;
+                    rb.drag = 25f;
+                    rb.angularDrag = 25f;
                 }
                 else
                 {
+                    //Stops pulling on object
                     Objectrb = null;
-                    rb.drag = 0;
-                    rb.angularDrag = 0;
+                    rb.drag = 0f;
+                    rb.angularDrag = 0f;
                 }
-            }              
+            }
+            else
+            {
+                //Resets reticle color
+                Reticle.color = Color.white;
+            }
+        }
+        else
+        {
+            //Resets eticle color
+            Reticle.color = Color.white;
         }
     }
 
