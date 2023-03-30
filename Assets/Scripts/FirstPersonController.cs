@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class FirstPersonController : MonoBehaviour
 {
-    public float speed = 5.0f;
-    public float mouseSensitivity = 2.0f;
-    public float jumpSpeed = 10.0f;
-    public float gravity = 20.0f;
+    public float speed = 5.0f;              // Movement speed
+    public float mouseSensitivity = 2.0f;   // Mouse sensitivity
+    public float jumpSpeed = 10.0f;         // Jump height
+    public float gravity = 20.0f;           // Gravity strength
 
-    private CharacterController characterController;
-    private Camera playerCamera;
-    private float verticalVelocity = 0.0f;
-    private float xRotation = 0.0f;
+    private CharacterController characterController;   // Reference to CharacterController component
+    private Camera playerCamera;                        // Reference to Camera component
+    private float verticalVelocity = 0.0f;              // Vertical velocity for jumping and falling
+    private float xRotation = 0.0f;                     // Rotation around x-axis
 
     void Start()
     {
+        // Get references to components
         characterController = GetComponent<CharacterController>();
         playerCamera = GetComponentInChildren<Camera>();
 
+        // Hide cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -54,6 +56,7 @@ public class FirstPersonController : MonoBehaviour
         verticalVelocity -= gravity * Time.deltaTime;
         moveDirection.y = verticalVelocity;
 
+        // Move the character
         characterController.Move(moveDirection * Time.deltaTime);
     }
 }
