@@ -41,13 +41,7 @@ public class ObjectPickup : MonoBehaviour
                     rb.drag = 25f;
                     rb.angularDrag = 25f;
                 }
-                else
-                {
-                    //Stops pulling on object
-                    Objectrb = null;
-                    rb.drag = 0f;
-                    rb.angularDrag = 0f;
-                }
+                
             }
             else
             {
@@ -59,6 +53,15 @@ public class ObjectPickup : MonoBehaviour
         {
             //Resets eticle color
             Reticle.color = Color.white;
+        }
+
+        //Droppingobject
+        if (Input.GetMouseButtonUp(0) && Objectrb)
+        {
+            //Stops pulling on object
+            Objectrb.drag = 0f;
+            Objectrb.angularDrag = 0f;
+            Objectrb = null;
         }
     }
 
