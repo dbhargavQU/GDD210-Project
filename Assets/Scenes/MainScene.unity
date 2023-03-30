@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 446633717}
   - component: {fileID: 446633716}
   - component: {fileID: 446633715}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,6 +872,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855535690}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &928772374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 229655292880392446, guid: d57748ed6d6b4e841832b189a98aff4b, type: 3}
+  m_PrefabInstance: {fileID: 229655292487777679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &928772379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928772374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090a80116ebf18b4aad92ae75d130b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupDistance: 2
+  throwForce: 0
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  reticle: {fileID: 1599344604}
 --- !u!1001 &933321872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2147,7 +2170,7 @@ GameObject:
   - component: {fileID: 1876090225}
   - component: {fileID: 1876090224}
   - component: {fileID: 1876090223}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2169,7 +2192,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &1876090224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2421,6 +2444,10 @@ PrefabInstance:
       propertyPath: Reticle
       value: 
       objectReference: {fileID: 1599344604}
+    - target: {fileID: 3510209755925462555, guid: d57748ed6d6b4e841832b189a98aff4b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3510209755925462555, guid: d57748ed6d6b4e841832b189a98aff4b, type: 3}
       propertyPath: MoveTarget
       value: 
