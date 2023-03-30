@@ -6,9 +6,12 @@ public class FirstPersonController : MonoBehaviour
 {
     public float speed = 5.0f;
     public float mouseSensitivity = 2.0f;
+    public float jumpSpeed = 10.0f;
+    public float gravity = 20.0f;
 
     private CharacterController characterController;
     private Camera playerCamera;
+    private float verticalVelocity = 0.0f;
     private float xRotation = 0.0f;
 
     void Start()
@@ -37,6 +40,20 @@ public class FirstPersonController : MonoBehaviour
         float moveZ = Input.GetAxis("Vertical");
 
         Vector3 moveDirection = transform.TransformDirection(new Vector3(moveX, 0, moveZ)) * speed;
-        characterController.SimpleMove(moveDirection);
+
+        // Jump
+        if (characterController.isGrounded)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                verticalVelocity = jumpSpeed;
+            }
+        }
+
+        // Apply gravity
+        verticalVelocity -= gravity * Time.deltaTime;
+        moveDirection.y = verticalVelocity;
+
+        characterController.Move(moveDirection * Time.deltaTime);
     }
 }

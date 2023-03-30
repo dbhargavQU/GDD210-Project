@@ -2361,6 +2361,14 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 229655293439359233, guid: d57748ed6d6b4e841832b189a98aff4b, type: 3}
+      propertyPath: gravity
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 229655293439359233, guid: d57748ed6d6b4e841832b189a98aff4b, type: 3}
+      propertyPath: jumpSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 229655293439359234, guid: d57748ed6d6b4e841832b189a98aff4b, type: 3}
       propertyPath: m_RootOrder
       value: 2
