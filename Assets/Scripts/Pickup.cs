@@ -9,9 +9,11 @@ public class Pickup : MonoBehaviour
     [SerializeField] private float throwForce = 10.0f;        // The force at which the object will be thrown when released
     [SerializeField] private LayerMask hitLayers;             // The layers that the raycast should hit
     [SerializeField] private Image reticle;                   // The UI image used as the reticle
+    [SerializeField] private float heldObjectDrag = 5.0f;     // The drag to apply to the held object
 
     private Camera mainCamera;                                 // Reference to the camera
     private Rigidbody holdingRb;                               // Reference to the currently held object
+    private float originalDrag;                                // The original drag of the held object
 
     private void Start()
     {
@@ -36,6 +38,9 @@ public class Pickup : MonoBehaviour
             {
                 // Move the held object towards the camera position
                 holdingRb.MovePosition(ray.GetPoint(pickupDistance));
+
+                // Set the drag on the held object to the specified value
+                holdingRb.drag = heldObjectDrag;
             }
         }
         else
@@ -51,8 +56,11 @@ public class Pickup : MonoBehaviour
                         // Pick up the object
                         holdingRb = hit.collider.attachedRigidbody;
 
-                        // Disable gravity on the object
-                        holdingRb.useGravity = false;
+                        // Save the original drag of the held object
+                        originalDrag = holdingRb.drag;
+
+                        // Set the drag on the held object to the specified value
+                        holdingRb.drag = heldObjectDrag;
 
                         // Change the reticle color
                         reticle.color = Color.green;
@@ -69,8 +77,8 @@ public class Pickup : MonoBehaviour
 
     private void DropObject()
     {
-        // Enable gravity on the held object
-        holdingRb.useGravity = true;
+        // Reset the drag on the held object
+        holdingRb.drag = originalDrag;
 
         // Apply a force to the object in the direction of the camera's forward vector
         holdingRb.AddForce(mainCamera.transform.forward * throwForce, ForceMode.Impulse);
