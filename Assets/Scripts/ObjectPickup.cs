@@ -51,11 +51,11 @@ public class ObjectPickup : MonoBehaviour
         }
         else
         {
-            //Resets eticle color
+            //Resets reticle color
             Reticle.color = Color.white;
         }
 
-        //Droppingobject
+        //Drops object if one is picked up
         if (Input.GetMouseButtonUp(0) && Objectrb)
         {
             //Stops pulling on object
