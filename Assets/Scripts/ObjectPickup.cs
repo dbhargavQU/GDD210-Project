@@ -7,12 +7,19 @@ public class ObjectPickup : MonoBehaviour
 {
     //Drag in empty Target gameobject
     public GameObject MoveTarget;
+    //Create variable for rigidbody
     private Rigidbody Objectrb;
-    //UI Reticle
+
+    //UI
     public Image Reticle;
+    public GameObject Paper1;
+    public GameObject Paper1UI;
+    public GameObject Paper2;
+    public GameObject Paper2UI;
     void Start()
     {
-        
+        Paper1UI.SetActive(false);
+        Paper2UI.SetActive(false);
     }
 
 
@@ -24,10 +31,14 @@ public class ObjectPickup : MonoBehaviour
         //Raycast from player towards object with Rigidbody, ray has a range of 2
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3f))
-        {
-
+        { 
             //Defines Rigidbody and checks for one
             Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
+
+            //Checks for Paperscripts
+            Paper1script ps1 = hit.collider.GetComponent<Paper1script>();
+            Paper2script ps2 = hit.collider.GetComponent<Paper2script>();
+
             if (rb != null)
             {
                 //Changes reticle color
@@ -43,6 +54,35 @@ public class ObjectPickup : MonoBehaviour
                 }
                 
             }
+
+            //Pickup Paper1
+            else if (ps1 != null)
+            {
+                //Changes reticle color
+                Reticle.color = Color.green;
+
+                //Picks up paper when mouse held down
+                if (Input.GetMouseButton(0))
+                {
+                    //Activates UI, removes object 
+                    Paper1UI.SetActive(true);
+                    Paper1.SetActive(false);
+                }
+            }
+            //Pickup Paper2
+            else if (ps2 != null)
+            {
+                //Changes reticle color
+                Reticle.color = Color.green;
+
+                //Picks up paper when mouse held down
+                if (Input.GetMouseButton(0))
+                {
+                    //Activates UI, removes object 
+                    Paper2UI.SetActive(true);
+                    Paper2.SetActive(false);
+                }
+            }
             else
             {
                 //Resets reticle color
@@ -51,11 +91,11 @@ public class ObjectPickup : MonoBehaviour
         }
         else
         {
-            //Resets eticle color
+            //Resets reticle color
             Reticle.color = Color.white;
         }
 
-        //Droppingobject
+        //Drops object if one is picked up, must be put outside raycast because object was stuck from raycast not hitting it
         if (Input.GetMouseButtonUp(0) && Objectrb)
         {
             //Stops pulling on object
@@ -63,6 +103,15 @@ public class ObjectPickup : MonoBehaviour
             Objectrb.angularDrag = 0f;
             Objectrb = null;
         }
+        else if (Input.GetMouseButtonUp(0)){
+
+            //Restores object, deactivates UI
+            Paper1UI.SetActive(false);
+            Paper1.SetActive(true);
+            Paper2UI.SetActive(false);
+            Paper2.SetActive(true);
+        }
+
     }
 
     private void FixedUpdate()
