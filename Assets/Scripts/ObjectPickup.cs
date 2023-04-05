@@ -94,7 +94,6 @@ public class ObjectPickup : MonoBehaviour
             //Resets reticle color
             Reticle.color = Color.white;
         }
-
         //Drops object if one is picked up, must be put outside raycast because object was stuck from raycast not hitting it
         if (Input.GetMouseButtonUp(0) && Objectrb)
         {
