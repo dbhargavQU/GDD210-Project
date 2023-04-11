@@ -51,6 +51,7 @@ public class ObjectPickup : MonoBehaviour
                     Objectrb = rb;
                     rb.drag = 25f;
                     rb.angularDrag = 25f;
+                    Reticle.enabled = false;
                 }
                 
             }
@@ -101,8 +102,9 @@ public class ObjectPickup : MonoBehaviour
             Objectrb.drag = 0f;
             Objectrb.angularDrag = 0f;
             Objectrb = null;
+            Reticle.enabled = true;
         }
-        else if (Input.GetMouseButtonUp(0)){
+        if(Input.GetMouseButtonUp(0)){
 
             //Restores object, deactivates UI
             Paper1UI.SetActive(false);
