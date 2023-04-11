@@ -837,7 +837,7 @@ GameObject:
   - component: {fileID: 446633715}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: BoxDestroy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2578,12 +2578,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 871717794226910581, guid: 0dc4a93f68f195746aec618da18bfde3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.725
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320112886869706839, guid: 0dc4a93f68f195746aec618da18bfde3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2447093438870284043, guid: 0dc4a93f68f195746aec618da18bfde3, type: 3}
       propertyPath: m_Name
       value: Box
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dc4a93f68f195746aec618da18bfde3, type: 3}
+--- !u!1 &1764282051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8986963962567755644, guid: 0dc4a93f68f195746aec618da18bfde3, type: 3}
+  m_PrefabInstance: {fileID: 1764282050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1764282052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764282051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7bfbedac6e2694283c6a7771ff5387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyDelay: 1
 --- !u!1001 &1800061881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2917,6 +2943,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 279f02a823b46504692f88163fcbf697, type: 3}
       propertyPath: m_Name
       value: Plushy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 279f02a823b46504692f88163fcbf697, type: 3}
+      propertyPath: m_TagString
+      value: BoxDestroy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 279f02a823b46504692f88163fcbf697, type: 3}
