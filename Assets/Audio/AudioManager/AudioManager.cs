@@ -26,10 +26,17 @@ public class AudioManager : MonoBehaviour
     {
         instance.audioSource.PlayOneShot(clip, volume);
     }
-
+    /*
     public static void PlaySoundAtPosition(AudioClip clip, Vector3 pos, float volume = 1f)
     {
         AudioSource.PlayClipAtPoint(clip, pos, volume);
     }
+    */
+    public static void PlayMusic(AudioClip clip, float volume = 1f)
+    {
+        instance.audioSource.clip = clip;
+        instance.audioSource.Play();
+        instance.audioSource.volume = volume;
+    } 
 }
 
