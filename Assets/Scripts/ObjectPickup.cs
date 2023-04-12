@@ -55,7 +55,7 @@ public class ObjectPickup : MonoBehaviour
                     rb.drag = 25f;
                     rb.angularDrag = 25f;
                     Reticle.enabled = false;
-                }  
+                }
             }
 
             //Pickup Paper1
@@ -111,17 +111,19 @@ public class ObjectPickup : MonoBehaviour
             Objectrb.drag = 0f;
             Objectrb.angularDrag = 0f;
             Objectrb = null;
+            //Makes reticle visible
             Reticle.enabled = true;
         }
         //Deactivates papers when E is not being held
         if(Input.GetKeyUp(KeyCode.E)){
-
             //Restores object, deactivates UI
             HoldE.SetActive(false);
             Paper1UI.SetActive(false);
             Paper1.SetActive(true);
             Paper2UI.SetActive(false);
             Paper2.SetActive(true);
+            //Makes reticle visible
+            Reticle.enabled = true;
         }
 
     }
