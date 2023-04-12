@@ -1078,7 +1078,7 @@ GameObject:
   - component: {fileID: 965098633}
   - component: {fileID: 965098629}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: SceneTransiton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1155,8 +1155,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965098628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9179, y: 2.3308, z: 18.894}
-  m_LocalScale: {x: 1.9842227, y: 3.8515244, z: 0.5}
+  m_LocalPosition: {x: 1.8593, y: 2.3308, z: 18.6151}
+  m_LocalScale: {x: 2.1014903, y: 3.8515244, z: 1.05785}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
