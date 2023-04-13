@@ -75,11 +75,11 @@ public class ObjectPickup : MonoBehaviour
                 }
                 if (pls && Input.GetMouseButtonDown(0))
                 {
-                    AudioManager.PlaySound(PlushSound, 1f);
+                    AudioManager.PlaySound(PlushSound, 8f);
                 }
                 if (rks && Input.GetMouseButtonDown(0))
                 {
-                    AudioManager.PlaySound(RocketSound, 1f);
+                    AudioManager.PlaySound(RocketSound, 6f);
                 }
             }
 
