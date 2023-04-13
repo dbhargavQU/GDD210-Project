@@ -3628,6 +3628,14 @@ PrefabInstance:
       propertyPath: Paper2UI
       value: 
       objectReference: {fileID: 2060839628}
+    - target: {fileID: 8321268584209448282, guid: d3bfa708a4a0c214aae3a158b83004da, type: 3}
+      propertyPath: PlushSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 090541cca592fc446bd34c8eb2040a8a, type: 3}
+    - target: {fileID: 8321268584209448282, guid: d3bfa708a4a0c214aae3a158b83004da, type: 3}
+      propertyPath: RocketSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 98e5cb7fcb8165e45b0e8c267b665cf9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3bfa708a4a0c214aae3a158b83004da, type: 3}
 --- !u!1 &4849393384875144169
