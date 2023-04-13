@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public static void PlaySound(AudioClip clip, float volume = 1f)
+    public static void PlaySound(AudioClip clip, float volume = 10f)
     {
         instance.audioSource.PlayOneShot(clip, volume);
     }
