@@ -17,6 +17,12 @@ public class ObjectPickup : MonoBehaviour
     public GameObject Paper1UI;
     public GameObject Paper2;
     public GameObject Paper2UI;
+
+    //Separate section for sound effects
+    [Header("SFX")]
+    public AudioClip BallSound;
+    public AudioClip PlushSound;
+    public AudioClip RocketSound;
     void Start()
     {
         HoldE.SetActive(false);
@@ -37,6 +43,11 @@ public class ObjectPickup : MonoBehaviour
             //Defines Rigidbody and checks for one
             Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
 
+            //Checks for scripts of different objects
+            Ballscript bs = hit.collider.GetComponent<Ballscript>();
+            Plushiescript pls = hit.collider.GetComponent<Plushiescript>();
+            Rocketscript rks = hit.collider.GetComponent<Rocketscript>();
+
             //Checks for Paperscripts
             Paper1script ps1 = hit.collider.GetComponent<Paper1script>();
             Paper2script ps2 = hit.collider.GetComponent<Paper2script>();
@@ -55,6 +66,20 @@ public class ObjectPickup : MonoBehaviour
                     rb.drag = 25f;
                     rb.angularDrag = 25f;
                     Reticle.enabled = false;
+                }
+
+                //Object Sounds
+                if (bs)
+                {
+                    //AudioManager.PlaySound(BallSound, 0.5f);
+                }
+                if (pls)
+                {
+                    //AudioManager.PlaySound(PlushSound, 0.5f);
+                }
+                if (rks)
+                {
+                    //AudioManager.PlaySound(RocketSound, 0.5f);
                 }
             }
 
@@ -114,6 +139,11 @@ public class ObjectPickup : MonoBehaviour
             //Makes reticle visible
             Reticle.enabled = true;
         }
+        if (Input.GetMouseButtonUp(0))
+        {
+            //Makes reticle visible
+            Reticle.enabled = true;
+        }
         //Deactivates papers when E is not being held
         if(Input.GetKeyUp(KeyCode.E)){
             //Restores object, deactivates UI
@@ -122,8 +152,7 @@ public class ObjectPickup : MonoBehaviour
             Paper1.SetActive(true);
             Paper2UI.SetActive(false);
             Paper2.SetActive(true);
-            //Makes reticle visible
-            Reticle.enabled = true;
+
         }
 
     }
