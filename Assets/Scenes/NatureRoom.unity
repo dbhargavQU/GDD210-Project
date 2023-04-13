@@ -1774,6 +1774,10 @@ PrefabInstance:
       value: NewPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 8321268584209448282, guid: d3bfa708a4a0c214aae3a158b83004da, type: 3}
+      propertyPath: HoldE
+      value: 
+      objectReference: {fileID: 1707981300}
+    - target: {fileID: 8321268584209448282, guid: d3bfa708a4a0c214aae3a158b83004da, type: 3}
       propertyPath: Paper1
       value: 
       objectReference: {fileID: 8383063686692549107, guid: 7f02e61491f391e49b79c23c7ea6ee59, type: 3}
@@ -9187,6 +9191,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702593127}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1707981300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6011004895117267008, guid: 279c805f50022c24e95bb190bb9a358e, type: 3}
+  m_PrefabInstance: {fileID: 1745578053}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1739423127
 GameObject:
   m_ObjectHideFlags: 0
