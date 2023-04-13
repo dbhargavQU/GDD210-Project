@@ -71,15 +71,15 @@ public class ObjectPickup : MonoBehaviour
                 //Object Sounds
                 if (bs)
                 {
-                    //AudioManager.PlaySound(BallSound, 0.5f);
+                    AudioManager.PlaySound(BallSound, 0.5f);
                 }
                 if (pls)
                 {
-                    //AudioManager.PlaySound(PlushSound, 0.5f);
+                    AudioManager.PlaySound(PlushSound, 0.5f);
                 }
                 if (rks)
                 {
-                    //AudioManager.PlaySound(RocketSound, 0.5f);
+                    AudioManager.PlaySound(RocketSound, 0.5f);
                 }
             }
 
