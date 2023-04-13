@@ -12,12 +12,14 @@ public class ObjectPickup : MonoBehaviour
 
     //UI
     public Image Reticle;
+    public GameObject HoldE;
     public GameObject Paper1;
     public GameObject Paper1UI;
     public GameObject Paper2;
     public GameObject Paper2UI;
     void Start()
     {
+        HoldE.SetActive(false);
         Paper1UI.SetActive(false);
         Paper2UI.SetActive(false);
     }
@@ -39,6 +41,7 @@ public class ObjectPickup : MonoBehaviour
             Paper1script ps1 = hit.collider.GetComponent<Paper1script>();
             Paper2script ps2 = hit.collider.GetComponent<Paper2script>();
 
+            //Object Pickup
             if (rb != null)
             {
                 //Changes reticle color
@@ -53,7 +56,6 @@ public class ObjectPickup : MonoBehaviour
                     rb.angularDrag = 25f;
                     Reticle.enabled = false;
                 }
-
             }
 
             //Pickup Paper1
@@ -61,9 +63,11 @@ public class ObjectPickup : MonoBehaviour
             {
                 //Changes reticle color
                 Reticle.color = Color.green;
+                //Display directions
+                HoldE.SetActive(true);
 
                 //Picks up paper when mouse held down
-                if (Input.GetMouseButton(0))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     //Activates UI, removes object 
                     Paper1UI.SetActive(true);
@@ -75,9 +79,11 @@ public class ObjectPickup : MonoBehaviour
             {
                 //Changes reticle color
                 Reticle.color = Color.green;
+                //Display directions
+                HoldE.SetActive(true);
 
                 //Picks up paper when mouse held down
-                if (Input.GetMouseButton(0))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     //Activates UI, removes object 
                     Paper2UI.SetActive(true);
@@ -88,6 +94,8 @@ public class ObjectPickup : MonoBehaviour
             {
                 //Resets reticle color
                 Reticle.color = Color.white;
+                //Hides directions
+                HoldE.SetActive(false);
             }
         }
         else
@@ -95,6 +103,7 @@ public class ObjectPickup : MonoBehaviour
             //Resets reticle color
             Reticle.color = Color.white;
         }
+
         //Drops object if one is picked up, must be put outside raycast because object was stuck from raycast not hitting it
         if (Input.GetMouseButtonUp(0) && Objectrb)
         {
@@ -105,8 +114,10 @@ public class ObjectPickup : MonoBehaviour
             //Makes reticle visible
             Reticle.enabled = true;
         }
-        if(Input.GetMouseButtonUp(0)){
+        //Deactivates papers when E is not being held
+        if(Input.GetKeyUp(KeyCode.E)){
             //Restores object, deactivates UI
+            HoldE.SetActive(false);
             Paper1UI.SetActive(false);
             Paper1.SetActive(true);
             Paper2UI.SetActive(false);
