@@ -1692,6 +1692,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3221416063450103055, guid: 6509aa37c3c072043a1ea6dda25d0e07, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.005
+      objectReference: {fileID: 0}
     - target: {fileID: 3831191467390635508, guid: 6509aa37c3c072043a1ea6dda25d0e07, type: 3}
       propertyPath: m_Name
       value: Bed
@@ -4288,6 +4292,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8281092178408631792, guid: 279c805f50022c24e95bb190bb9a358e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8281092179033736979, guid: 279c805f50022c24e95bb190bb9a358e, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4295,7 +4303,7 @@ PrefabInstance:
     - target: {fileID: 8281092179152037728, guid: 279c805f50022c24e95bb190bb9a358e, type: 3}
       propertyPath: m_text
       value: "February 4th 2356\n\nThe Monroe foundation blamed for the South road
-        building coplade due to the construction and testing of blast proof safety
+        building collapse due to the construction and testing of blast proof safety
         shelters. Last night seven residential homes collapsed in a sinkhole that
         buried five construction workers. Among them was Johnathin Midwinter, a former
         friend of the heads of the Monroe Foundation Doctor Eliot Monroe and his
@@ -4303,6 +4311,14 @@ PrefabInstance:
         for the loss of life and property. Others are asking why a blast shelter
         was being built at all, and are asking for more transparency if the company
         would be expanding their control. \r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281092179152037728, guid: 279c805f50022c24e95bb190bb9a358e, type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281092179152037728, guid: 279c805f50022c24e95bb190bb9a358e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8281092179995433563, guid: 279c805f50022c24e95bb190bb9a358e, type: 3}
       propertyPath: m_Pivot.x
