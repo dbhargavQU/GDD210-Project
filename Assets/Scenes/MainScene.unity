@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4002,9 +4002,9 @@ MonoBehaviour:
   Paper1UI: {fileID: 1191723055}
   Paper2: {fileID: 298348384}
   Paper2UI: {fileID: 2060839628}
-  BallSound: {fileID: 0}
-  PlushSound: {fileID: 8300000, guid: 17ca5b8ea29764a419af01a4aaa45cd7, type: 3}
-  RocketSound: {fileID: 8300000, guid: ac24284be1763704cb128a7fb740e56d, type: 3}
+  BallSound: {fileID: 8300000, guid: a94b2e033e15a634ea4eb9075807a43b, type: 3}
+  PlushSound: {fileID: 8300000, guid: 71db5c38ac48de94598c2e4bffe53ca3, type: 3}
+  RocketSound: {fileID: 8300000, guid: 5465e11a09716f2499e20ce89ec4e7b3, type: 3}
 --- !u!4 &3755891132469783280
 Transform:
   m_ObjectHideFlags: 0
