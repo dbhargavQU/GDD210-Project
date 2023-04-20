@@ -7,6 +7,9 @@ public class Destroy : MonoBehaviour
     public GameObject door; // Add a public variable for the door
     private int score = 0;
 
+    [Header("SFX")]
+    public AudioClip DoorSound;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("BoxDestroy"))
@@ -21,6 +24,7 @@ public class Destroy : MonoBehaviour
                 if (door != null)
                 {
                     Destroy(door, destroyDelay);
+                    AudioManager.PlaySound(DoorSound, 3f);
                 }
                 else
                 {
