@@ -147,12 +147,12 @@ GameObject:
   - component: {fileID: 8281092178408631795}
   - component: {fileID: 8281092178408631794}
   m_Layer: 5
-  m_Name: Paper2UI
+  m_Name: Paper4UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8281092178408631793
 RectTransform:
   m_ObjectHideFlags: 0
@@ -354,14 +354,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Four walls\n\nA room\nA stage\nA prison\nA box\n\nSix sides\nFour walls\nNo
-    windows.\n\nYet there are no walls in my dreams\nOf starry space and endless
-    seas\nOf trees of green and yellow sands.\n\nThere are many walls of city streets\nAnd
-    rocket ships \nAnd temples and gardens and parks.\nBut I only have four walls.
-    \n\nToday that changes."
+  m_text: "September 27 2356\n\n    Wildfires break out along the city and leave
+    hundreds homeless. Meteorologists are urging people in the greater Oakwood to
+    evacuate until the wildfires are under control. When speaking with the Smith
+    family, who had barely escaped their collapsing home, they said they were asked
+    to stay and work despite the state of emergency. If a company is threatening
+    to fire you if you don't work while your town is on fire, please try and give
+    a two weeks notice before evacuating."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40444187c219b6a4d8c330df8c5729e1, type: 2}
-  m_sharedMaterial: {fileID: -7437803390007929972, guid: 40444187c219b6a4d8c330df8c5729e1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3f8b4fea726489144a3e68c3d36e0a8b, type: 2}
+  m_sharedMaterial: {fileID: 5233916181041079702, guid: 3f8b4fea726489144a3e68c3d36e0a8b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -385,15 +387,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -439,12 +441,12 @@ GameObject:
   - component: {fileID: 8281092179033736974}
   - component: {fileID: 8281092179033736973}
   m_Layer: 5
-  m_Name: Paper1UI
+  m_Name: Paper3UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8281092179033736972
 RectTransform:
   m_ObjectHideFlags: 0
@@ -570,15 +572,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "September 23 2357\n\n\n   Dr. Elliot Monroe unveils the newest technology
-    in decentralized communication. The newest ledger chain Star Finder has debuted
-    to the public this morning and from a small survey hosted in the office this
-    seems to be the most popular chain in decades. Governance tokens will be sent
-    out over the next few days. I, your friendly neighborhood reporter, will be keeping
-    you up to date as I will be meeting with Dr. Monroe later this week."
+  m_text: "Re: Gardening\n\n    This isn't just a garden, we need this room to feel
+    like you're outside. If you can't remember what the outside was like before,
+    I have left a collection of reference books in the break room. It needs grass,
+    trees, rocks. This isn't the desert. Oh, and have a vent to move the oxygen into
+    the other rooms. We need people to be able to breathe down here.\n\n-Dr. Eliot
+    Monroe"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3f8b4fea726489144a3e68c3d36e0a8b, type: 2}
-  m_sharedMaterial: {fileID: 5233916181041079702, guid: 3f8b4fea726489144a3e68c3d36e0a8b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 40444187c219b6a4d8c330df8c5729e1, type: 2}
+  m_sharedMaterial: {fileID: -7437803390007929972, guid: 40444187c219b6a4d8c330df8c5729e1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -602,8 +604,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

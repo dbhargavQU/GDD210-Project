@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ObjectPickup : MonoBehaviour
+public class ObjectPickup2 : MonoBehaviour
 {
     //Drag in empty Target gameobject
     public GameObject MoveTarget;
@@ -13,21 +13,21 @@ public class ObjectPickup : MonoBehaviour
     //UI
     public Image Reticle;
     public GameObject HoldE;
-    public GameObject Paper1;
-    public GameObject Paper1UI;
-    public GameObject Paper2;
-    public GameObject Paper2UI;
+    public GameObject Paper3;
+    public GameObject Paper3UI;
+    public GameObject Paper4;
+    public GameObject Paper4UI;
 
     //Separate section for sound effects
-    [Header("SFX")]
-    public AudioClip BallSound;
-    public AudioClip PlushSound;
-    public AudioClip RocketSound;
+    //[Header("SFX")]
+    //public AudioClip BallSound;
+    //public AudioClip PlushSound;
+    //public AudioClip RocketSound;
     void Start()
     {
         HoldE.SetActive(false);
-        Paper1UI.SetActive(false);
-        Paper2UI.SetActive(false);
+        Paper3UI.SetActive(false);
+        Paper4UI.SetActive(false);
     }
 
 
@@ -39,18 +39,16 @@ public class ObjectPickup : MonoBehaviour
         //Raycast from player towards object with Rigidbody, ray has a range of 2
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3f))
-        { 
+        {
             //Defines Rigidbody and checks for one
             Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
 
             //Checks for scripts of different objects
-            Ballscript bs = hit.collider.GetComponent<Ballscript>();
-            Plushiescript pls = hit.collider.GetComponent<Plushiescript>();
-            Rocketscript rks = hit.collider.GetComponent<Rocketscript>();
+            //Ballscript bs = hit.collider.GetComponent<Ballscript>();
+            //Plushiescript pls = hit.collider.GetComponent<Plushiescript>();
+            //Rocketscript rks = hit.collider.GetComponent<Rocketscript>();
 
             //Checks for Paperscripts
-            Paper1script ps1 = hit.collider.GetComponent<Paper1script>();
-            Paper2script ps2 = hit.collider.GetComponent<Paper2script>();
             Paper3script ps3 = hit.collider.GetComponent<Paper3script>();
             Paper4script ps4 = hit.collider.GetComponent<Paper4script>();
 
@@ -62,7 +60,7 @@ public class ObjectPickup : MonoBehaviour
 
                 //Mouse is held down
                 if (Input.GetMouseButton(0))
-                { 
+                {
                     //If Object has rigidbody it will be referenced in FixedUpdate
                     Objectrb = rb;
                     rb.drag = 25f;
@@ -71,22 +69,22 @@ public class ObjectPickup : MonoBehaviour
                 }
 
                 //Object Sounds
-                if (bs && Input.GetMouseButtonDown(0))
+                //if (bs && Input.GetMouseButtonDown(0))
                 {
-                    AudioManager.PlaySound(BallSound, 2f);
+                //    AudioManager.PlaySound(BallSound, 2f);
                 }
-                if (pls && Input.GetMouseButtonDown(0))
+               // if (pls && Input.GetMouseButtonDown(0))
                 {
-                    AudioManager.PlaySound(PlushSound, 8f);
+                //    AudioManager.PlaySound(PlushSound, 8f);
                 }
-                if (rks && Input.GetMouseButtonDown(0))
+                //if (rks && Input.GetMouseButtonDown(0))
                 {
-                    AudioManager.PlaySound(RocketSound, 6f);
+                //    AudioManager.PlaySound(RocketSound, 6f);
                 }
             }
 
-            //Pickup Paper1
-            else if (ps1 != null)
+            //Pickup Paper3
+            else if (ps3 != null)
             {
                 //Changes reticle color
                 Reticle.color = Color.green;
@@ -97,12 +95,12 @@ public class ObjectPickup : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     //Activates UI, removes object 
-                    Paper1UI.SetActive(true);
-                    Paper1.SetActive(false);
+                    Paper3UI.SetActive(true);
+                    Paper3.SetActive(false);
                 }
             }
-            //Pickup Paper2
-            else if (ps2 != null)
+            //Pickup Paper4
+            else if (ps4 != null)
             {
                 //Changes reticle color
                 Reticle.color = Color.green;
@@ -113,8 +111,8 @@ public class ObjectPickup : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     //Activates UI, removes object 
-                    Paper2UI.SetActive(true);
-                    Paper2.SetActive(false);
+                    Paper4UI.SetActive(true);
+                    Paper4.SetActive(false);
                 }
             }
             else
@@ -147,13 +145,14 @@ public class ObjectPickup : MonoBehaviour
             Reticle.enabled = true;
         }
         //Deactivates papers when E is not being held
-        if(Input.GetKeyUp(KeyCode.E)){
+        if (Input.GetKeyUp(KeyCode.E))
+        {
             //Restores object, deactivates UI
             HoldE.SetActive(false);
-            Paper1UI.SetActive(false);
-            Paper1.SetActive(true);
-            Paper2UI.SetActive(false);
-            Paper2.SetActive(true);
+            Paper3UI.SetActive(false);
+            Paper3.SetActive(true);
+            Paper4UI.SetActive(false);
+            Paper4.SetActive(true);
 
         }
 
@@ -167,6 +166,6 @@ public class ObjectPickup : MonoBehaviour
             float dist = Mathf.Max(15f, Vector3.Distance(Objectrb.position, MoveTarget.transform.position));
             Objectrb.AddForce((MoveTarget.transform.position - Objectrb.position) * 100 * dist);
         }
-        
+
     }
 }
