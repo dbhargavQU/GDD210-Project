@@ -51,8 +51,6 @@ public class ObjectPickup : MonoBehaviour
             //Checks for Paperscripts
             Paper1script ps1 = hit.collider.GetComponent<Paper1script>();
             Paper2script ps2 = hit.collider.GetComponent<Paper2script>();
-            Paper3script ps3 = hit.collider.GetComponent<Paper3script>();
-            Paper4script ps4 = hit.collider.GetComponent<Paper4script>();
 
             //Object Pickup
             if (rb != null)
