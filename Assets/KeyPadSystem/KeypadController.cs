@@ -50,7 +50,7 @@ public class KeypadController : MonoBehaviour
             StartCoroutine(waitAndClear());
 
             // play the animation on the door GameObject
-            doorAnimator.SetTrigger("Open");
+            doorAnimator.Play("Open");
         }
         else
         {
