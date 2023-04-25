@@ -10,6 +10,9 @@ public class KeypadController : MonoBehaviour
     public Text passwordText;
     public Animator doorAnimator; // reference to the Animator component on the door GameObject
 
+    //[Header("SFX")]
+    //public AudioClip SafeOpenSound;
+
     private void Start()
     {
         passwordText.text = "";
@@ -51,6 +54,9 @@ public class KeypadController : MonoBehaviour
 
             // play the animation on the door GameObject
             doorAnimator.Play("Open");
+
+            //Play sound
+            //AudioManager.PlaySound(SafeOpenSound, 6f);
         }
         else
         {

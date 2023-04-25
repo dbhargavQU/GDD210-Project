@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class PlayerAim : MonoBehaviour
 {
-    public float maxDistance = 10f;
+    public float maxDistance = 2f;
     public Image Reticle;
+
+    [Header("SFX")]
+    public AudioClip KeypadSound;
 
     private void Update()
     {
@@ -19,6 +22,9 @@ public class PlayerAim : MonoBehaviour
             if (hit.transform.GetComponent<KeypadKey>() != null && Input.GetMouseButtonDown(0))
             {
                 hit.transform.GetComponent<KeypadKey>().SendKey();
+
+                //Plays sound
+                AudioManager.PlaySound(KeypadSound, 6f);
             }
 
             //Turns Reticle green if raycast hits key
