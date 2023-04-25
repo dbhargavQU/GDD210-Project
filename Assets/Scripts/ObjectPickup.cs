@@ -10,6 +10,9 @@ public class ObjectPickup : MonoBehaviour
     //Create variable for rigidbody
     private Rigidbody Objectrb;
 
+    public Transform headPos;
+
+
     //UI
     public Image Reticle;
     public GameObject HoldE;
@@ -33,12 +36,13 @@ public class ObjectPickup : MonoBehaviour
 
     void Update()
     {
-        //Green line to test raycast range
-        Debug.DrawLine(transform.position, transform.position + transform.forward * 3f, Color.green);
+    RaycastHit hit;
+    //Green line to test raycast range
+    Debug.DrawLine(transform.position, transform.position + transform.forward * 3f, Color.green);
 
         //Raycast from player towards object with Rigidbody, ray has a range of 2
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 3f))
+        
+    if (Physics.Raycast(transform.position, transform.forward, out hit, 3f))
         { 
             //Defines Rigidbody and checks for one
             Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
