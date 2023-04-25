@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerAim : MonoBehaviour
 {
     public float maxDistance = 10f;
+    public Image Reticle;
 
     private void Update()
     {
@@ -17,6 +19,12 @@ public class PlayerAim : MonoBehaviour
             if (hit.transform.GetComponent<KeypadKey>() != null && Input.GetMouseButtonDown(0))
             {
                 hit.transform.GetComponent<KeypadKey>().SendKey();
+            }
+
+            //Turns Reticle green if raycast hits key
+            if (hit.transform.GetComponent<KeypadKey>())
+            {
+                Reticle.color = Color.green;
             }
         }
     }
