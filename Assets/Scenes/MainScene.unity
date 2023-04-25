@@ -3713,6 +3713,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2203679251048143277, guid: aaf533abacadc984c9e34a664d9b4c34, type: 3}
+      propertyPath: password
+      value: 4644
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203679251048143277, guid: aaf533abacadc984c9e34a664d9b4c34, type: 3}
       propertyPath: doorAnimator
       value: 
       objectReference: {fileID: 810431942}
