@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -176,7 +176,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c93b3d0d72ee33d488b2b22b94af432d, type: 2}
+  - {fileID: 2100000, guid: a6823296ec6c2e942b217ca21736cb0c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2401,7 +2401,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: ae6a6dd845016cf4fa649a821e4c3c26, type: 3}
     - target: {fileID: 4191696215445878925, guid: 1cb419e1c33587f458c91583f924f2fa, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4191696215445878925, guid: 1cb419e1c33587f458c91583f924f2fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4605,7 +4605,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: -90.736, z: 0}
 --- !u!1 &1082701884
 GameObject:
@@ -4757,7 +4757,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c93b3d0d72ee33d488b2b22b94af432d, type: 2}
+  - {fileID: 2100000, guid: 454405623d513ea418ed6f92486560e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4920,7 +4920,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122455636429811473, guid: e7fa1d71e907b374c97f4701b7c5a473, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2122455636429811473, guid: e7fa1d71e907b374c97f4701b7c5a473, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7194,7 +7194,7 @@ GameObject:
   - component: {fileID: 1647346398}
   - component: {fileID: 1647346397}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: WallTextCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7275,7 +7275,7 @@ RectTransform:
   m_Children:
   - {fileID: 60669968}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: -1.5899, y: 4.586}
   m_AnchorMax: {x: 8.8997, y: 7.068}
@@ -7498,7 +7498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5660658378700606393, guid: 7af3236b40bc92c49ae12398a1686cff, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5660658378700606393, guid: 7af3236b40bc92c49ae12398a1686cff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7881,6 +7881,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8281092179152037728, guid: 279c805f50022c24e95bb190bb9a358e, type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281092179152037728, guid: 279c805f50022c24e95bb190bb9a358e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f8b4fea726489144a3e68c3d36e0a8b, type: 2}
+    - target: {fileID: 8281092179152037728, guid: 279c805f50022c24e95bb190bb9a358e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281092179152037728, guid: 279c805f50022c24e95bb190bb9a358e, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5233916181041079702, guid: 3f8b4fea726489144a3e68c3d36e0a8b, type: 2}
     - target: {fileID: 8281092179995433563, guid: 279c805f50022c24e95bb190bb9a358e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -7891,7 +7907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8281092179995433563, guid: 279c805f50022c24e95bb190bb9a358e, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8281092179995433563, guid: 279c805f50022c24e95bb190bb9a358e, type: 3}
       propertyPath: m_AnchorMax.x
