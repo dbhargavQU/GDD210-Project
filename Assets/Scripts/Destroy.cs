@@ -6,6 +6,8 @@ public class Destroy : MonoBehaviour
     public float destroyDelay = 1.0f;
     public GameObject door; // Add a public variable for the door
     private int score = 0;
+    public Animator RoomDoorAnimator; // reference to the Animator component on the door GameObject
+
 
     [Header("SFX")]
     public AudioClip DoorSound;
@@ -23,7 +25,7 @@ public class Destroy : MonoBehaviour
             {
                 if (door != null)
                 {
-                    Destroy(door, destroyDelay);
+                    RoomDoorAnimator.Play("DoorOpen");
                     AudioManager.PlaySound(DoorSound, 3f);
                 }
                 else

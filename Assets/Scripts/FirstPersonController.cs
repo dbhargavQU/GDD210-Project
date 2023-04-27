@@ -28,8 +28,8 @@ public class FirstPersonController : MonoBehaviour
     void Update()
     {
         // Camera rotation
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.timeScale;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.timeScale;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90.0f, 90.0f);
