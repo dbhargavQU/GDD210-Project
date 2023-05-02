@@ -18,6 +18,12 @@ public class ObjectPickup2 : MonoBehaviour
     public GameObject Paper4;
     public GameObject Paper4UI;
 
+    [Header("Puzzle")]
+    //public GameObject AboveText;
+    //public GameObject BelowText;
+    public GameObject BetweenText;
+   // public GameObject WithinText;
+
     //Separate section for sound effects
     //[Header("SFX")]
     //public AudioClip BallSound;
@@ -44,7 +50,7 @@ public class ObjectPickup2 : MonoBehaviour
             Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
 
             //Checks for scripts of different objects
-            //Ballscript bs = hit.collider.GetComponent<Ballscript>();
+            Keyscript ks = hit.collider.GetComponent<Keyscript>();
             //Plushiescript pls = hit.collider.GetComponent<Plushiescript>();
             //Rocketscript rks = hit.collider.GetComponent<Rocketscript>();
 
@@ -66,6 +72,12 @@ public class ObjectPickup2 : MonoBehaviour
                     rb.drag = 25f;
                     rb.angularDrag = 25f;
                     Reticle.enabled = false;
+                }
+
+                //"Between" Solved with key picked up
+                if (ks != null)
+                {
+                    BetweenText.SetActive(false);
                 }
 
                 //Object Sounds
@@ -153,7 +165,6 @@ public class ObjectPickup2 : MonoBehaviour
             Paper3.SetActive(true);
             Paper4UI.SetActive(false);
             Paper4.SetActive(true);
-
         }
 
     }
