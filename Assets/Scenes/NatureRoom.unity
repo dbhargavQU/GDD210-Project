@@ -3189,6 +3189,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178619009846921182, guid: cbd1e2fa6f571d0469f5b52db2b354a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870715455830871075, guid: cbd1e2fa6f571d0469f5b52db2b354a0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870715455830871075, guid: cbd1e2fa6f571d0469f5b52db2b354a0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870715455830871075, guid: cbd1e2fa6f571d0469f5b52db2b354a0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870715455830871075, guid: cbd1e2fa6f571d0469f5b52db2b354a0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870715455830871075, guid: cbd1e2fa6f571d0469f5b52db2b354a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3136692682141716780, guid: cbd1e2fa6f571d0469f5b52db2b354a0, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -3237,8 +3261,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature Room 1 1 2 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3599018408286449553, guid: cbd1e2fa6f571d0469f5b52db2b354a0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cbd1e2fa6f571d0469f5b52db2b354a0, type: 3}
+--- !u!1 &628686736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7914571859817265173, guid: cbd1e2fa6f571d0469f5b52db2b354a0, type: 3}
+  m_PrefabInstance: {fileID: 628686735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &628686737
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628686736}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1111b6b11c97ec649b2af7b79339b977, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &636317554
 GameObject:
   m_ObjectHideFlags: 0
@@ -10158,6 +10208,10 @@ PrefabInstance:
       propertyPath: password
       value: DAWN
       objectReference: {fileID: 0}
+    - target: {fileID: 2203679251048143277, guid: aaf533abacadc984c9e34a664d9b4c34, type: 3}
+      propertyPath: doorAnimator
+      value: 
+      objectReference: {fileID: 628686737}
     - target: {fileID: 2346182797667030635, guid: aaf533abacadc984c9e34a664d9b4c34, type: 3}
       propertyPath: m_Text
       value: S
