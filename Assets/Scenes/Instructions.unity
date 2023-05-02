@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.5411765, g: 0.44705883, b: 0.6313726, a: 0}
+  m_BackGroundColor: {r: 0.1882353, g: 0.15686275, b: 0.21960784, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -408,8 +408,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1039,7 +1039,7 @@ PrefabInstance:
     - target: {fileID: 4191696215445878924, guid: 1cb419e1c33587f458c91583f924f2fa, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: aeab99ebd58e07244bfbbdcead769eb7, type: 3}
     - target: {fileID: 4191696215445878925, guid: 1cb419e1c33587f458c91583f924f2fa, type: 3}
       propertyPath: m_RootOrder
       value: 4
