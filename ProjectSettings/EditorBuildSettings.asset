@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NatureRoom.unity
     guid: c4fb676021c92f845bed786d0d88fa21
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: e6d3d14ff7e5f904589a9693a69af6f3
   m_configObjects: {}
