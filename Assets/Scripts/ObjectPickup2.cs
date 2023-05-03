@@ -17,6 +17,8 @@ public class ObjectPickup2 : MonoBehaviour
     public GameObject Paper3UI;
     public GameObject Paper4;
     public GameObject Paper4UI;
+    public GameObject Paper5;
+    public GameObject Paper5UI;
 
     [Header("Puzzle")]
     //public GameObject AboveText;
@@ -34,6 +36,7 @@ public class ObjectPickup2 : MonoBehaviour
         HoldE.SetActive(false);
         Paper3UI.SetActive(false);
         Paper4UI.SetActive(false);
+        Paper5UI.SetActive(false);
     }
 
 
@@ -57,6 +60,7 @@ public class ObjectPickup2 : MonoBehaviour
             //Checks for Paperscripts
             Paper3script ps3 = hit.collider.GetComponent<Paper3script>();
             Paper4script ps4 = hit.collider.GetComponent<Paper4script>();
+            Paper5script ps5 = hit.collider.GetComponent<Paper5script>();
 
             //Object Pickup
             if (rb != null)
@@ -83,15 +87,15 @@ public class ObjectPickup2 : MonoBehaviour
                 //Object Sounds
                 //if (bs && Input.GetMouseButtonDown(0))
                 {
-                //    AudioManager.PlaySound(BallSound, 2f);
+                    //    AudioManager.PlaySound(BallSound, 2f);
                 }
-               // if (pls && Input.GetMouseButtonDown(0))
+                // if (pls && Input.GetMouseButtonDown(0))
                 {
-                //    AudioManager.PlaySound(PlushSound, 8f);
+                    //    AudioManager.PlaySound(PlushSound, 8f);
                 }
                 //if (rks && Input.GetMouseButtonDown(0))
                 {
-                //    AudioManager.PlaySound(RocketSound, 6f);
+                    //    AudioManager.PlaySound(RocketSound, 6f);
                 }
             }
 
@@ -125,6 +129,22 @@ public class ObjectPickup2 : MonoBehaviour
                     //Activates UI, removes object 
                     Paper4UI.SetActive(true);
                     Paper4.SetActive(false);
+                }
+            }
+            //Pickup Paper5
+            else if (ps5 != null)
+            {
+                //Changes reticle color
+                Reticle.color = Color.green;
+                //Display directions
+                HoldE.SetActive(true);
+
+                //Picks up paper when mouse held down
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    //Activates UI, removes object 
+                    Paper5UI.SetActive(true);
+                    Paper5.SetActive(false);
                 }
             }
             else
@@ -165,6 +185,8 @@ public class ObjectPickup2 : MonoBehaviour
             Paper3.SetActive(true);
             Paper4UI.SetActive(false);
             Paper4.SetActive(true);
+            Paper5UI.SetActive(false);
+            Paper5.SetActive(true);
         }
 
     }
