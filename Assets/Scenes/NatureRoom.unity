@@ -3430,6 +3430,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: f41d4e8dc2daba842849e84b45531cd6, type: 2}
     - target: {fileID: 3959718813041723044, guid: cbd1e2fa6f571d0469f5b52db2b354a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959718813041723044, guid: cbd1e2fa6f571d0469f5b52db2b354a0, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -11942,7 +11946,7 @@ GameObject:
   - component: {fileID: 4675359669103793192}
   - component: {fileID: 4675359669103793188}
   - component: {fileID: 4675359669103793193}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -12049,7 +12053,7 @@ GameObject:
   - component: {fileID: 4675359670692462042}
   - component: {fileID: 4675359670692462040}
   - component: {fileID: 4675359670692462046}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NewPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -12111,7 +12115,7 @@ GameObject:
   - component: {fileID: 4675359670770936063}
   - component: {fileID: 4675359670770936062}
   - component: {fileID: 4675359670770936049}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12192,7 +12196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2208742218384880368}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
