@@ -291,7 +291,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 399121366}
+      - m_Target: {fileID: 399121365}
         m_TargetAssemblyTypeName: NewScene, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7badfe6bf56e8cc499dabe82ace3cf46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: MainScene
+  nextScene: Credits
 --- !u!114 &399121366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,7 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7badfe6bf56e8cc499dabe82ace3cf46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Credits
+  nextScene: Instructions
 --- !u!114 &399121367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7badfe6bf56e8cc499dabe82ace3cf46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Instructions
+  nextScene: MainScene
 --- !u!114 &399121368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -884,7 +884,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 399121365}
+      - m_Target: {fileID: 399121367}
         m_TargetAssemblyTypeName: NewScene, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
