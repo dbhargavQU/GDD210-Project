@@ -20,8 +20,8 @@ public class Destroy : MonoBehaviour
             score += 1; // Increment score directly in OnTriggerEnter
             Debug.Log("Score: " + score);
 
-            // Check if score is 3 and destroy the door
-            if (score == 3)
+            // Check if score is 4 and destroy the door
+            if (score == 4)
             {
                 if (door != null)
                 {
