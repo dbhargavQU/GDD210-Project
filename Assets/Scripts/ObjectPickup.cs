@@ -26,6 +26,7 @@ public class ObjectPickup : MonoBehaviour
     public AudioClip BallSound;
     public AudioClip PlushSound;
     public AudioClip RocketSound;
+
     void Start()
     {
         HoldE.SetActive(false);
@@ -51,6 +52,7 @@ public class ObjectPickup : MonoBehaviour
             Ballscript bs = hit.collider.GetComponent<Ballscript>();
             Plushiescript pls = hit.collider.GetComponent<Plushiescript>();
             Rocketscript rks = hit.collider.GetComponent<Rocketscript>();
+            Duckscript ds = hit.collider.GetComponent<Duckscript>();
 
             //Checks for Paperscripts
             Paper1script ps1 = hit.collider.GetComponent<Paper1script>();
@@ -75,7 +77,7 @@ public class ObjectPickup : MonoBehaviour
                 //Object Sounds
                 if (bs && Input.GetMouseButtonDown(0))
                 {
-                    AudioManager.PlaySound(BallSound, 2f);
+                    AudioManager.PlaySound(BallSound, 4f);
                 }
                 if (pls && Input.GetMouseButtonDown(0))
                 {
@@ -84,6 +86,10 @@ public class ObjectPickup : MonoBehaviour
                 if (rks && Input.GetMouseButtonDown(0))
                 {
                     AudioManager.PlaySound(RocketSound, 6f);
+                }
+                if (ds && Input.GetMouseButtonDown(0))
+                {
+                    AudioManager.PlaySound(BallSound, 4f);
                 }
             }
 
