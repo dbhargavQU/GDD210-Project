@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Keyholescript : MonoBehaviour
 {
-
+    public GameObject BelowText;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -14,6 +14,7 @@ public class Keyholescript : MonoBehaviour
         if (ks)
         {
             Destroy(gameObject);
+            BelowText.SetActive(false);
         }
     }
 }
