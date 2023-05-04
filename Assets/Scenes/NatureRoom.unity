@@ -11772,7 +11772,7 @@ GameObject:
   - component: {fileID: 1614872070}
   - component: {fileID: 919132147549061974}
   - component: {fileID: 1614872071}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KeyA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11802,7 +11802,7 @@ GameObject:
   - component: {fileID: 5220279180366514110}
   - component: {fileID: 6244326179862241531}
   - component: {fileID: 8797806405033759736}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12230,7 +12230,7 @@ GameObject:
   - component: {fileID: 348407623445788851}
   - component: {fileID: 8455029663418439025}
   - component: {fileID: 4294008249128044473}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: polySurface3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
