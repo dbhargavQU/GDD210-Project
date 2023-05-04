@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2120,11 +2120,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Four walls \r\n\r\nA room \r\nA stage \r\nA prison \r\nA box \r\n\r\nSix
-    sides\r\nFour walls \r\nNo windows. \r\n\r\nYet there are no walls in my dreams\r\nOf
-    starry space and endless seas\r\nOf trees of green and yellow sands. \r\n\r\nThere
-    are many walls of city stress \r\nAnd rocket ships \r\nAnd temples and gardens
-    and parks. \r\nBut I have only four walls. \r\n\r\nToday that changes."
+  m_text: "4 walls \r\n\r\nA room \r\nA stage \r\nA prison \r\nA box \r\n\r\n6 sides\r\n4
+    walls \r\nNo windows. \r\n\r\nYet there are no walls in my dreams\r\nOf starry
+    space and endless seas\r\nOf trees of green and yellow sands. \r\n\r\nThere are
+    many walls of city stress \r\nAnd rocket ships \r\nAnd temples and gardens and
+    parks. \r\nBut I have only 4 walls. \r\n\r\nToday that changes."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40444187c219b6a4d8c330df8c5729e1, type: 2}
   m_sharedMaterial: {fileID: -7437803390007929972, guid: 40444187c219b6a4d8c330df8c5729e1, type: 2}
@@ -3114,6 +3114,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5078677840796181770, guid: 9494e7a458758b5458db30271b5d0e2c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c66cf22c1dae4a49b1f9da5625a82c7, type: 2}
     - target: {fileID: 5078677841009115035, guid: 9494e7a458758b5458db30271b5d0e2c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3122,6 +3126,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5078677841411561430, guid: 9494e7a458758b5458db30271b5d0e2c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 829c254bd2f99a84db869a7d272e1300, type: 2}
     - target: {fileID: 5078677841413232356, guid: 9494e7a458758b5458db30271b5d0e2c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3130,6 +3138,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5078677841953194765, guid: 9494e7a458758b5458db30271b5d0e2c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c66cf22c1dae4a49b1f9da5625a82c7, type: 2}
+    - target: {fileID: 5078677842144823916, guid: 9494e7a458758b5458db30271b5d0e2c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6546211e7209f4846b1245c9be302234, type: 2}
     - target: {fileID: 5078677842144823917, guid: 9494e7a458758b5458db30271b5d0e2c, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -3138,6 +3154,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5078677842225453450, guid: 9494e7a458758b5458db30271b5d0e2c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c66cf22c1dae4a49b1f9da5625a82c7, type: 2}
+    - target: {fileID: 5078677842558657321, guid: 9494e7a458758b5458db30271b5d0e2c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c66cf22c1dae4a49b1f9da5625a82c7, type: 2}
     - target: {fileID: 5124140689297471022, guid: 9494e7a458758b5458db30271b5d0e2c, type: 3}
       propertyPath: m_Name
       value: GameObject
