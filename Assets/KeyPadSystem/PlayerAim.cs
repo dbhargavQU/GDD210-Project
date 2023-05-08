@@ -24,7 +24,7 @@ public class PlayerAim : MonoBehaviour
                 hit.transform.GetComponent<KeypadKey>().SendKey();
 
                 //Plays sound
-                AudioManager.PlaySound(KeypadSound, 6f);
+                AudioManager.PlaySound(KeypadSound, 5f);
             }
 
             //Turns Reticle green if raycast hits key
