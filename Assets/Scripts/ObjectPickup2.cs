@@ -21,10 +21,8 @@ public class ObjectPickup2 : MonoBehaviour
     public GameObject Paper5UI;
 
     [Header("Puzzle")]
-    //public GameObject AboveText;
-    //public GameObject BelowText;
     public GameObject BetweenText;
-   // public GameObject WithinText;
+    public GameObject WithinText;
 
     //Separate section for sound effects
     //[Header("SFX")]
@@ -54,8 +52,7 @@ public class ObjectPickup2 : MonoBehaviour
 
             //Checks for scripts of different objects
             Keyscript ks = hit.collider.GetComponent<Keyscript>();
-            //Plushiescript pls = hit.collider.GetComponent<Plushiescript>();
-            //Rocketscript rks = hit.collider.GetComponent<Rocketscript>();
+            Riverscript riv = hit.collider.GetComponent<Riverscript>();
 
             //Checks for Paperscripts
             Paper3script ps3 = hit.collider.GetComponent<Paper3script>();
@@ -147,6 +144,12 @@ public class ObjectPickup2 : MonoBehaviour
                     Paper5.SetActive(false);
                 }
             }
+
+            else if (riv != null)
+            {
+                WithinText.SetActive(false);
+            }
+
             else
             {
                 //Resets reticle color
